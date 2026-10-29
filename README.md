@@ -80,7 +80,7 @@ Four WS2812B-4020 / WS2812C-4020 addressable LEDs (one per controller port, chai
 | LED chain pin | Connect to |
 | --- | --- |
 | **DIN** (first LED) | ESP32 (U5) pad **GPIO21**. On the side of U5 facing the serial header, it is the **6th pad counting from the U.FL antenna end** (pad 1 is GND, pads 4 and 5 have the traces to the header TX/RX, GPIO21 is the first free pad below them). A 100-330 Ohm series resistor close to the ESP32 is recommended. |
-| **GND** | The **GND** pin of the serial header. |
+| **GND** | The **top left pin of any controller port** (blue circles above, right next to the 5V pin). The bottom right pin of each port is GND as well. |
 | **VDD** | **5V**: the **top right pin of any controller port** (orange circles above, as seen on the QSB side). Check with a multimeter that it reads ~5V with the console on. Do not use 3.3V, the LEDs need at least ~3.7V. |
 
 GPIO21 is not routed on the PCB and its neighbour pads are NC (unused) and RXD0, so it is the easiest free pad to solder.
